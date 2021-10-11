@@ -10,3 +10,13 @@
     display: flex;
     gap: 10px;
 }
+
+.form-group__button-container{
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+}
+
+input[type="file"]{
+    display: none;
+}
