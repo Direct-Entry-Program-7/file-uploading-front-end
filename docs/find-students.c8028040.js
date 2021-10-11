@@ -140,12 +140,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"lxOee":[function(require,module,exports) {
+})({"7XdOG":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "69f74e7f31319ffd";
-module.bundle.HMR_BUNDLE_ID = "ca64da7a32fbca7f";
+module.bundle.HMR_BUNDLE_ID = "f500d7fec8028040";
 "use strict";
 function _createForOfIteratorHelper(o, allowArrayLike) {
     var it;
@@ -454,25 +454,11 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"cIp60":[function(require,module,exports) {
+},{}],"63EZG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jquery = require("jquery");
 var _jqueryDefault = parcelHelpers.interopDefault(_jquery);
-const fr = new FileReader();
-_jqueryDefault.default("#txt-name").trigger('focus');
-/* Event listeners */ _jqueryDefault.default('#btn-browse').on('click', ()=>_jqueryDefault.default('#file').trigger('click')
-);
-_jqueryDefault.default('#file').on('input', ()=>{
-    const files = document.getElementById('file').files;
-    if (files.length > 0) fr.readAsDataURL(files[0]);
-});
-fr.addEventListener('load', ()=>{
-    _jqueryDefault.default('#picture').attr('src', fr.result + "");
-});
-_jqueryDefault.default('#btn-clear').on('click', ()=>{
-    _jqueryDefault.default('#picture').attr('src', '');
-    _jqueryDefault.default('#file').val('');
-});
+_jqueryDefault.default("#txt-search").trigger('focus');
 
 },{"jquery":"igaHu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"igaHu":[function(require,module,exports) {
 /*!
@@ -7318,6 +7304,6 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["lxOee","cIp60"], "cIp60", "parcelRequire2349")
+},{}]},["7XdOG","63EZG"], "63EZG", "parcelRequire2349")
 
-//# sourceMappingURL=add-new-student.32fbca7f.js.map
+//# sourceMappingURL=find-students.c8028040.js.map
