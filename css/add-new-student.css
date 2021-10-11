@@ -1,19 +1,9 @@
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.form-group > input {
-    padding: 10px
+.form-group__required{
+    color: red;
 }
 
 .container__form-group{
     margin: 20px;
-}
-
-.form-group__required{
-    color: red;
 }
 
 .form-group__image-wrapper{

@@ -3147,4 +3147,15 @@ readers do not read off random characters that represent icons */
 .button:focus{
     background-color: gray;
 }
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.form-group > input {
+    padding: 10px
+}
+ul{
+    list-style-type: none;
+}
 /*# sourceMappingURL=index.b016c36b.css.map */

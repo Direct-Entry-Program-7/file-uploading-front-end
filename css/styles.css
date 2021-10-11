@@ -37,3 +37,17 @@
 .button:focus{
     background-color: gray;
 }
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group > input {
+    padding: 10px
+}
+
+ul{
+    list-style-type: none;
+}

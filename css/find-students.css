@@ -1,0 +1,47 @@
+.container__result{
+    margin-top: 20px;
+}
+
+.result__result-item{
+    display: grid;
+    grid-column-gap: 10px;
+    align-items: center;
+    grid-template-areas: 
+                        "pic id-container"
+                        "pic contact"
+                        "pic address";
+    grid-template-columns: 75px 1fr;
+    border: 1px solid lightgray;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.result__result-item:hover{
+    background-color: rgb(231, 231, 231);
+}
+
+.result__pic{
+    grid-area: pic;
+    height: 75px;
+}
+
+.result__pic > img{
+    width: 75px;
+    height: 75px;
+    background-color: lightgray;
+    border-radius: 100%;
+}
+
+.result__id-container{
+    grid-area: id-container;
+}
+
+.result__contact{
+    grid-area: contact;
+}
+
+.result__address{
+    grid-area: address;
+}
