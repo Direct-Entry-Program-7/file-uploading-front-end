@@ -6,3 +6,15 @@
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
 }
+
+.title{
+    text-align: center;
+}
+
+.body__title{
+    margin-top: 20px;
+}
+
+.body__container{
+    margin: 20px;
+}

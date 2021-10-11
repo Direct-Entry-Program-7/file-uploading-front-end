@@ -1,0 +1,25 @@
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group > input,
+.form-group > button {
+    padding: 10px
+}
+
+.container__form-group{
+    margin: 20px;
+}
+
+.form-group__required{
+    color: red;
+}
+
+.form-group__image-wrapper{
+    display: flex;
+    gap: 10px;
+}
+
+/*# sourceMappingURL=add-new-stuent.ef929e22.css.map */
