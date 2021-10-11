@@ -2,7 +2,9 @@
   "name": "file-uploading-front-end",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf ./docs",
+    "start": "parcel index.html",
+    "build": "rm -rf ./docs && parcel build index.html"
   },
   "repository": {
     "type": "git",
@@ -13,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Direct-Entry-Program-7/file-uploading-front-end/issues"
   },
-  "homepage": "https://github.com/Direct-Entry-Program-7/file-uploading-front-end#readme"
+  "homepage": "https://github.com/Direct-Entry-Program-7/file-uploading-front-end#readme",
+  "devDependencies": {
+    "parcel": "^2.0.0-rc.0"
+  }
 }

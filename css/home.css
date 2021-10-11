@@ -1,0 +1,20 @@
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.container > button{
+    width: 80%;
+    padding: 10px;
+}
+
+.body__container{
+    margin: 20px;
+}
