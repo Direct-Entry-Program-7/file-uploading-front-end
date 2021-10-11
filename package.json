@@ -1,0 +1,17 @@
+{
+  "name": "file-uploading-front-end",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Direct-Entry-Program-7/file-uploading-front-end.git"
+  },
+  "author": "DEP-7",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Direct-Entry-Program-7/file-uploading-front-end/issues"
+  },
+  "homepage": "https://github.com/Direct-Entry-Program-7/file-uploading-front-end#readme"
+}
