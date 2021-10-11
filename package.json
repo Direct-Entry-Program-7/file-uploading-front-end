@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "clean": "rm -rf ./docs",
-    "start": "parcel index.html",
-    "build": "rm -rf ./docs && parcel build index.html"
+    "start": "parcel index.html --dist-dir ./docs/",
+    "build": "rm -rf ./docs && parcel build index.html --dist-dir ./docs/"
   },
   "repository": {
     "type": "git",
