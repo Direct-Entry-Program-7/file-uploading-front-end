@@ -492,7 +492,36 @@ _jqueryDefault.default("#btn-save").on('click', (eventData)=>{
         _jqueryDefault.default("#txt-contact").trigger('select');
         return;
     }
-/* Client-side validation is okay */ }); /* API Calls */ 
+    const files = document.getElementById('file').files;
+    /* Client-side validation is okay */ saveStudent(name, address, contact ?? null, files.length === 0 ? null : files[0]).then((id)=>{
+        alert(`${id} has been saved successfully`);
+        document.getElementById('frm').reset();
+        _jqueryDefault.default("#txt-name").trigger('focus');
+        _jqueryDefault.default("#picture").attr('src', ' ');
+    }).catch((err)=>{
+        alert(err.message);
+        console.log(err);
+    });
+});
+/* API Calls */ function saveStudent(name, address, contact = null, picture = null) {
+    return new Promise((res, rej)=>{
+        const studentData = new FormData();
+        studentData.append('name', name);
+        studentData.append('address', address);
+        if (contact) studentData.append('contact', contact);
+        if (picture) studentData.append('picture', picture);
+        fetch(BASE_API, {
+            method: 'POST',
+            body: studentData
+        }).then((response)=>{
+            if (response.status !== 201) throw new Error('Failed to save the customer');
+            response.json().then((json)=>res(json)
+            );
+        }).catch((err)=>{
+            rej(err);
+        });
+    });
+}
 
 },{"jquery":"igaHu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"igaHu":[function(require,module,exports) {
 /*!
