@@ -514,11 +514,23 @@ _jqueryDefault.default("#btn-save").on('click', (eventData)=>{
             method: 'POST',
             body: studentData
         }).then((response)=>{
+            // if (response.status !== 201) throw response.status;
             if (response.status !== 201) throw new Error('Failed to save the customer');
             response.json().then((json)=>res(json)
             );
         }).catch((err)=>{
             rej(err);
+        // switch (err) {
+        //     case 400:
+        //         rej(new Error('Invalid request'));
+        //         break;
+        //     case 500:
+        //         rej(new Error('Server Side Error'));
+        //         break;
+        //     default:
+        //         rej(new Error('Failed to save the customer'));
+        //         break;
+        // }
         });
     });
 }

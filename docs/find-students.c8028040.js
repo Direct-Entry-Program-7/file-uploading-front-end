@@ -458,7 +458,24 @@ function hmrAcceptRun(bundle, id) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jquery = require("jquery");
 var _jqueryDefault = parcelHelpers.interopDefault(_jquery);
+const BASE_API = 'http://localhost:8080/sms/students';
 _jqueryDefault.default("#txt-search").trigger('focus');
+loadStudents();
+/* Event listeners */ _jqueryDefault.default("#txt-search").on('input', ()=>loadStudents()
+);
+/* API Calls */ function loadStudents() {
+    const q = _jqueryDefault.default("#txt-search").val().trim();
+    fetch(BASE_API + `?q=${q}`).then((response)=>{
+        if (response.status !== 200) throw new Error("Failed to fetch students");
+        response.json().then((students)=>{
+            _jqueryDefault.default("ul.result li").remove();
+            students.forEach((s)=>{
+                const html = `\n                    <li class="result__result-item">\n                    <div class="result__pic">\n                        <img alt="" src="${s.picture ?? ''}"">\n                    </div>\n                    <div class="result__id-container">\n                        <span class="result__id">${s.id}</span>;\n                        <span class="result__name">${s.name}</span>\n                    </div>\n                    <div class="result__contact">${s.contact ?? ''}</div>\n                    <div class="result__address">${s.address}</div>\n                    </li>                \n                `;
+                _jqueryDefault.default("ul.result").append(html);
+            });
+        });
+    });
+}
 
 },{"jquery":"igaHu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"igaHu":[function(require,module,exports) {
 /*!
