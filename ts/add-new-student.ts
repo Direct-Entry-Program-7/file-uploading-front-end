@@ -1,6 +1,7 @@
 import $ from 'jquery';
 
 const fr = new FileReader();
+const BASE_API = 'http://localhost:8080/sms/students';
 
 $("#txt-name").trigger('focus');
 
@@ -50,3 +51,5 @@ $("#btn-save").on('click', (eventData)=> {
     /* Client-side validation is okay */
 
 });
+
+/* API Calls */

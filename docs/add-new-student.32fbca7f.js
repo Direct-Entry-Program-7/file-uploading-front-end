@@ -459,6 +459,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jquery = require("jquery");
 var _jqueryDefault = parcelHelpers.interopDefault(_jquery);
 const fr = new FileReader();
+const BASE_API = 'http://localhost:8080/sms/students';
 _jqueryDefault.default("#txt-name").trigger('focus');
 /* Event listeners */ _jqueryDefault.default('#btn-browse').on('click', ()=>_jqueryDefault.default('#file').trigger('click')
 );
@@ -491,7 +492,7 @@ _jqueryDefault.default("#btn-save").on('click', (eventData)=>{
         _jqueryDefault.default("#txt-contact").trigger('select');
         return;
     }
-/* Client-side validation is okay */ });
+/* Client-side validation is okay */ }); /* API Calls */ 
 
 },{"jquery":"igaHu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"igaHu":[function(require,module,exports) {
 /*!
