@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Direct-Entry-Program-7/file-uploading-front-end#readme",
   "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0",
     "@types/jquery": "^3.5.6",
     "parcel": "^2.0.0-rc.0"
   },

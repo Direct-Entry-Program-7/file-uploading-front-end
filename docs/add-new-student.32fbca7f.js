@@ -470,9 +470,28 @@ fr.addEventListener('load', ()=>{
     _jqueryDefault.default('#picture').attr('src', fr.result + "");
 });
 _jqueryDefault.default('#btn-clear').on('click', ()=>{
-    _jqueryDefault.default('#picture').attr('src', '');
+    _jqueryDefault.default('#picture').attr('src', ' ');
     _jqueryDefault.default('#file').val('');
 });
+_jqueryDefault.default("#btn-save").on('click', (eventData)=>{
+    eventData.preventDefault();
+    const name = _jqueryDefault.default("#txt-name").val().trim();
+    const address = _jqueryDefault.default("#txt-address").val().trim();
+    const contact = _jqueryDefault.default("#txt-contact").val().trim();
+    if (!/^[A-Za-z ]+$/.test(name)) {
+        alert("Invalid name");
+        _jqueryDefault.default("#txt-name").trigger('select');
+        return;
+    } else if (address.length < 3) {
+        alert("Invalid address");
+        _jqueryDefault.default("#txt-address").trigger('select');
+        return;
+    } else if (contact && !/[0-9 ]{7,}/.test(contact)) {
+        alert("Invalid contact");
+        _jqueryDefault.default("#txt-contact").trigger('select');
+        return;
+    }
+/* Client-side validation is okay */ });
 
 },{"jquery":"igaHu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"igaHu":[function(require,module,exports) {
 /*!

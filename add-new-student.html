@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,45 +8,49 @@
     <title>Add New Student: Student Managemnt System</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/add-new-student.css">
-        
+
 </head>
+
 <body class="body">
     <h1 class="title body__title">
         <a href="index.html"><i class="fas fa-arrow-left"></i></a>
         Add New Student
     </h1>
     <main class="container body__container">
-        <div class="form-group container__form-group">
-            <label for="txt-name">Student name <span class="form-group__required">*</span></label>
-            <input type="text" id="txt-name" placeholder="Enter student name here">
-        </div>
+        <form>
+            <div class="form-group container__form-group">
+                <label for="txt-name">Student name <span class="form-group__required">*</span></label>
+                <input type="text" id="txt-name" placeholder="Enter student name here">
+            </div>
 
-        <div class="form-group container__form-group">
-            <label for="txt-address">Student address <span class="form-group__required">*</span></label>
-            <input type="text" id="txt-address" placeholder="Enter student address here">
-        </div>
-        
-        <div class="form-group container__form-group">
-            <label for="txt-contact">Student contact number</label>
-            <input type="text" id="txt-contact" placeholder="Enter student contact number here">
-        </div>
-        
-        <div class="form-group container__form-group">
-            <label for="btn-browse">Student picture</label>
-            <div class="form-group__image-wrapper">
-                <img id="picture" alt="" width="150" height="150">
-                <input type="file" id="file" accept="image/*">
-                <div class="form-group__button-container">
-                    <button id="btn-browse" class="button"><i class="fas fa-folder-open"></i> Browse</button>
-                    <button id="btn-clear" class="button danger"><i class="fas fa-trash"></i> Remove</button>
+            <div class="form-group container__form-group">
+                <label for="txt-address">Student address <span class="form-group__required">*</span></label>
+                <input type="text" id="txt-address" placeholder="Enter student address here">
+            </div>
+
+            <div class="form-group container__form-group">
+                <label for="txt-contact">Student contact number</label>
+                <input type="text" id="txt-contact" placeholder="Enter student contact number here">
+            </div>
+
+            <div class="form-group container__form-group">
+                <label for="btn-browse">Student picture</label>
+                <div class="form-group__image-wrapper">
+                    <img id="picture" width="150" height="150">
+                    <input type="file" id="file" accept="image/*">
+                    <div class="form-group__button-container">
+                        <button id="btn-browse" class="button" type="button"><i class="fas fa-folder-open"></i> Browse</button>
+                        <button id="btn-clear" class="button danger" type="button"><i class="fas fa-trash"></i> Remove</button>
+                    </div>
                 </div>
             </div>
-        </div>    
-        
-        <div class="form-group container__form-group">
-            <button class="button">Save Student</button>
-        </div>         
+
+            <div class="form-group container__form-group">
+                <button id="btn-save" type="submit" class="button">Save Student</button>
+            </div>
+        </form>
     </main>
     <script type="module" src="ts/add-new-student.ts"></script>
 </body>
+
 </html>
